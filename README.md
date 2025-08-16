@@ -1,9 +1,50 @@
-# Monreader Hardware and Vision
-Apviza Project 4 MonReader
-Background:
+Page Flip Detection with Computer Vision  
 
-Our company develops innovative Artificial Intelligence and Computer Vision solutions that revolutionize industries. Machines that can see: We pack our solutions in small yet intelligent devices that can be easily integrated to your existing data flow. Computer vision for everyone: Our devices can recognize faces, estimate age and gender, classify clothing types and colors, identify everyday objects and detect motion. Technical consultancy: We help you identify use cases of artificial intelligence and computer vision in your industry. Artificial intelligence is the technology of today, not the future.
+## Overview  
+**Page Flip Detection** is a computer vision project designed to classify whether a document page has been flipped or not. Using convolutional neural networks (CNNs) and sequence modeling (LSTMs), the project processes images of documents to detect page states.  
 
-MonReader is a new mobile document digitization experience for the blind, for researchers and for everyone else in need for fully automatic, highly fast and high-quality document scanning in bulk. It is composed of a mobile app and all the user needs to do is flip pages and everything is handled by MonReader: it detects page flips from low-resolution camera preview and takes a high-resolution picture of the document, recognizing its corners and crops it accordingly, and it dewarps the cropped document to obtain a bird's eye view, sharpens the contrast between the text and the background and finally recognizes the text with formatting kept intact, being further corrected by MonReader's ML powered redactor.
+This project was originally developed as part of the *MonReader Hardware and Vision* work and the notebook file was named *Project 4 final.ipynb*. It has now been renamed and documented for clarity and reproducibility.  
 
-MonReader is a new mobile document digitalization experience for the blind, for researchers and for everyone else in need for fully automatic, highly fast and high-quality document scanning in bulk. It is composed of a mobile app and all the user needs to do is flip pages and everything is handled by MonReader: it detects page flips from low-resolution camera preview and takes a high-resolution picture of the document, recognizing its corners and crops it accordingly, and it dewarps the cropped document to obtain a bird's eye view, sharpens the contrast between the text and the background and finally recognizes the text with formatting kept intact, being further corrected by MonReader's ML powered redactor.
+---
+
+## Goals  
+- Detect whether a page is in a **flipped** or **not flipped** state.  
+- Build a lightweight vision model suitable for real-time use.  
+- Explore CNN + LSTM approaches for robust classification.  
+
+---
+
+## Features  
+- **Data Preprocessing:** Image resizing, normalization, and labeling.  
+- **Image Classification:** CNN model with Conv2D, MaxPooling, Dense layers.  
+- **Sequential Modeling:** Integration of **LSTM** layers for temporal page-flip detection.  
+- **Custom Metrics:** F1-score metric implemented with Keras backend.  
+- **Reproducibility:** End-to-end Jupyter notebook workflow.  
+
+---
+
+## Methodology  
+1. **Data Loading** – Images loaded from `flip/` and `notflip/` folders.  
+2. **Preprocessing** – Resizing to 128×128 pixels, normalization of pixel values.  
+3. **Model Architecture** –  
+   - CNN layers for feature extraction.  
+   - Dense layers for binary classification.  
+   - Optional **LSTM** integration for temporal detection.  
+4. **Training & Validation** – Dataset split into training, validation, and testing sets.  
+5. **Evaluation** – Accuracy, F1-score, and error analysis performed.  
+
+---
+
+## Results  
+- CNN successfully classified page states with strong accuracy.  
+- Custom F1 metric provided balanced performance evaluation.  
+- Potential for integration into **document digitization systems** and **assistive reading devices**.  
+
+---
+
+## Tools & Technologies  
+- **Python**  
+- **TensorFlow / Keras** – deep learning models  
+- **NumPy, Pandas** – data handling  
+- **Scikit-learn** – evaluation metrics and train/test splitting  
+- **Matplotlib** – visualization  
