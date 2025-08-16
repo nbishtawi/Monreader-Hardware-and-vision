@@ -3,6 +3,8 @@ Page Flip Detection with Computer Vision
 ## Overview  
 **Page Flip Detection** is a computer vision project designed to classify whether a document page has been flipped or not. Using convolutional neural networks (CNNs) and sequence modeling (LSTMs), the project processes images of documents to detect page states.   
 
+Note: The datasets used in this project are **proprietary** and therefore not included in this repository.  
+
 ---
 
 ## Goals  
